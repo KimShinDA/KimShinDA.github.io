@@ -1,19 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Login Form</title> 
+  <style> 
+    * { 
+      box-sizing: border-box; 
+    } 
+    body { 
+      margin: 0; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      background: linear-gradient(15deg, #4b6043, #658354, #75975e, #87ab69, #95bb72); 
+      font-family: Arial, sans-serif; 
+      color: #2f1110; 
+    } 
 
-    <div class="container">
-        <form-group:get>
-            <div class="form-group"><input type="text" name="" id="" placeholder="Enter Username"></div>
-            <div class="form-group"><input type="password" name="" id="" placeholder="Enter password..."></div>
-            <div class="form-group"><button type="submit">Sign In</button></div>
-        </form-group:get>
-    </div>
+    .container { 
+      background: white; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+      width: 100%; 
+      max-width: 400px; 
+      padding: 30px; 
+    } 
 
-</body>
-</html>
+    .logo { 
+      display: flex; 
+      justify-content: center; 
+      margin-bottom: 20px; 
+    } 
+
+    .logo img { 
+      width: 60px; 
+      height: 60px; 
+      border-radius: 50%; 
+    } 
+
+    h2 { 
+      text-align: center; 
+      margin: 10px 0; 
+      color: #658354; 
+    } 
+
+    label { 
+      margin: 10px 0 5px; 
+      display: block; 
+      color: #4b6043;
+    } 
+
+    input[type="text"], input[type="password"] { 
+      width: 100%; 
+      padding: 10px; 
+      margin: 5px 0 15px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+
+    } 
+
+    input[type="submit"] { 
+
+      background-color: #658354; 
+      color: white; 
+      padding: 12px; 
+      border: none; 
+      border-radius: 5px; 
+      width: 100%; 
+      cursor: pointer; 
+      font-size: 16px; 
+      font-weight: bolder;
+    } 
+
+    input[type="submit"]:hover { 
+      background-color: #75975e; 
+    } 
+
+    .bottom-link { 
+      text-align: center; 
+      margin-top: 15px; 
+
+    } 
+
+    .bottom-link a { 
+      text-decoration: none; 
+      color: #95bb72; 
+      font-weight: bold; 
+    } 
+
+    .bottom-link a:hover { 
+      color: #658354; 
+    } 
+
+    a:link {
+        text-decoration: none;
+      }
+      
+      a:visited {
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .dot{
+        color: grey;
+        font-size: xx-large;
+      }
+
+  
+  </style> 
+</head> 
+<body> 
+  <div class="container"> 
+    <div class="logo"> 
+      <img src="Logo.png" alt="Logo"> 
+    </div> 
+    <h2>Log Into Eco</h2> 
+    <form> 
+      <label for="email">Email ID</label> 
+      <input type="text" id="email" name="email" placeholder="Email ID" required>  
+      <label for="password">Password</label> 
+      <input type="password" id="password" name="password" placeholder="Password" required> 
+      <input type="submit" value="Log In"> 
+      <div class="bottom-link"> 
+        <p><a>Forgot Account? </a> <a href="SIGN_UP-CODE">Sign up for Eco</a></p>       
+    </div> 
+    </form> 
+  </div> 
+</body> 
+</html> 
+
+  
