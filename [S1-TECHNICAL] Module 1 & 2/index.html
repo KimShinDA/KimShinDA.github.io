@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume with Light/Dark Mode</title>
+  <style>
+    /* Light mode styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #ffffff;
+      color: #000000;
+      transition: all 0.3s ease;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .header img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .section-title {
+      border-top: 2px solid black;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-weight: bold;
+    }
+    .content-list {
+      padding-left: 20px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    body.dark-mode button {
+      background-color: #ffffff;
+      color: #121212;
+    }
+    body.dark-mode .section-title {
+      border-top: 2px solid white;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header img {
+        margin-top: 10px;
+        align-self: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <h1 id="name">DEL AMEN, KIM SHIN E.</h1>
+        <p id="address">Address: Bulacan, Philippines</p>
+        <p id="contact">Contact No.: +63 9656912338</p>
+        <p id="email">Email: 202312025@fit.edu.ph/p>
+      </div>
+      <img src="profile-picture.jpg" alt="2x2 Picture">
+    </div>
+
+    <!-- Objective -->
+    <div>
+      <h5 class="section-title">OBJECTIVE:</h5>
+      <p id="objective">I plan to use the knowledge and experience I have garnered to make an impact in terms of growth for</p>
+      <p id="objective"> the company and its success. I will, through my abilities and continuous learning,</p>
+      <p id="objective">learning, add value and drive innovation within the organization.</p>
+      <p id="objective">I seek to grow professionally while aligning my efforts with the company's vision and objectives.</p>
+
+    </div>
+
+    <!-- Academic Background -->
+    <div>
+      <h5 class="section-title">ACADEMIC BACKGROUNDS:</h5>
+      <p><strong>Junior High School:</strong>Muzon Harmony Hills High School  (S.Y. 2017 - 2021)</p>
+      <p><strong>Senior High School:</strong>STI College of San Jose Del Monte  (S.Y. 2021 - 2023)</p>
+      <p><strong>College:</strong> FEU Institute of Technology (S.Y. 2023 - Current)</p>
+    </div>
+
+    <!-- Skills -->
+    <div>
+      <h5 class="section-title">SOFT SKILLS:</h5>
+      <ul id="skills-list" class="content-list">
+        <li>Collaborative Teamwork</li>
+        <li>Organizational Excellence</li>
+        <li>Creative Problem-Solving</li>
+        <li>Flexibility and Adaptability</li>
+        <li>Effective Time Management</li>
+        <li>Strong Communication Skills</li>
+      </ul>
+
+      <h5 class="section-title">HARD SKILLS:</h5>
+      <ul id="skills-list" class="content-list">
+        <li>C++</li>
+        <li>Java</li>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>Basic C#</li>
+        <li>Basic Networking</li>
+        <li>Basic JavaScript and JQuery</li>
+        <li>Database Management System</li>
+      </ul>
+    </div>
+
+    <!-- Button -->
+    <button id="toggle-button" onclick="toggleMode()">Switch to Dark Mode</button>
+  </div>
+
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      const button = document.getElementById("toggle-button");
+      
+      body.classList.toggle("dark-mode");
+      
+      if (body.classList.contains("dark-mode")) {
+        button.textContent = "Switch to Light Mode";
+      } else {
+        button.textContent = "Switch to Dark Mode";
+      }
+    }
+  </script>
+</body>
+</html>
