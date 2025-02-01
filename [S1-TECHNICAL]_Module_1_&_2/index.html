@@ -4,19 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Resume with Light/Dark Mode</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
   <style>
-    /* Light mode styles */
+    /* General Styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 20px;
-      background-color: #ffffff;
+      background-color: #F8F9FA;
       color: #000000;
       transition: all 0.3s ease;
     }
     .container {
       max-width: 800px;
       margin: auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     }
+    
+    /* Header Section */
     .header {
       display: flex;
       justify-content: space-between;
@@ -27,54 +37,89 @@
       width: 100px;
       height: 100px;
       object-fit: cover;
-      border: 3px solid black;
+      border: 3px solid #D62828;
+      border-radius: 50%;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     }
+    .header h1 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #D62828;
+    }
+    
+    /* Section Titles */
     .section-title {
-      border-top: 2px solid black;
-      margin-top: 20px;
-      padding-top: 10px;
+      color: #D62828;
+      border-bottom: 2px solid #D62828;
+      margin-top: 30px;
+      padding-bottom: 5px;
       font-weight: bold;
     }
-    .content-list {
-      padding-left: 20px;
+    
+    /* Lists */
+    ul {
+      list-style-type: disc;
+      padding-left: 25px;
     }
+    ul li::marker {
+      font-weight: bold;
+      font-size: 1.3em;
+      color: #D62828;
+    }
+    
+    /* Button */
     button {
       margin-top: 20px;
       padding: 10px 15px;
-      background-color: #4CAF50;
+      background: linear-gradient(45deg, #D62828, #E63946);
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 20px;
       cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
     button:hover {
-      background-color: #45a049;
+      background: linear-gradient(45deg, #E63946, #1E1E1E);
+      transform: scale(1.05);
     }
-
-    /* Dark mode styles */
+    
+    /* Dark Mode */
     body.dark-mode {
       background-color: #121212;
       color: #ffffff;
     }
-    body.dark-mode button {
-      background-color: #ffffff;
-      color: #121212;
+    body.dark-mode .container {
+      background: #1E1E1E;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     }
     body.dark-mode .section-title {
-      border-top: 2px solid white;
+      border-bottom: 2px solid #E63946;
     }
-    body.dark-mode img {
-        border: 3px solid white;
+    body.dark-mode .header img {
+      border: 3px solid #E63946;
     }
-
+    body.dark-mode ul li::marker {
+      color: #E63946;
+    }
+    body.dark-mode button {
+      background: linear-gradient(45deg, #E63946, #D62828);
+      color: white;
+    }
+    body.dark-mode button:hover {
+      color: #121212;
+      background: linear-gradient(45deg, #E63946, #F8F9FA);
+      transform: scale(1.05)
+    }
+    
+    /* Responsive Design */
     @media (max-width: 768px) {
       .header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
       .header img {
         margin-top: 10px;
-        align-self: center;
       }
     }
   </style>
@@ -84,10 +129,10 @@
     <!-- Header -->
     <div class="header">
       <div>
-        <h1 id="name">DEL AMEN, KIM SHIN E.</h1>
-        <p id="address">Address: Bulacan, Philippines</p>
-        <p id="contact">Contact No.: +63 9656912338</p>
-        <p id="email">Email: 202312025@fit.edu.ph/p>
+        <h1>DEL AMEN, KIM SHIN E.</h1>
+        <p>Address: Bulacan, Philippines</p>
+        <p>Contact No.: +63 9656912338</p>
+        <p>Email: 202312025@fit.edu.ph</p>
       </div>
       <img src="ID_PIC.jpg" alt="2x2 Picture">
     </div>
@@ -95,25 +140,21 @@
     <!-- Objective -->
     <div>
       <h5 class="section-title">OBJECTIVE:</h5>
-      <p id="objective">I plan to use the knowledge and experience I have garnered to make an impact in terms of growth for</p>
-      <p id="objective"> the company and its success. I will, through my abilities and continuous learning,</p>
-      <p id="objective">learning, add value and drive innovation within the organization.</p>
-      <p id="objective">I seek to grow professionally while aligning my efforts with the company's vision and objectives.</p>
-
+      <p>I plan to use the knowledge and experience I have garnered to make an impact in terms of growth for the company and its success.</p>
     </div>
 
     <!-- Academic Background -->
     <div>
       <h5 class="section-title">ACADEMIC BACKGROUNDS:</h5>
-      <p><strong>Junior High School:</strong>Muzon Harmony Hills High School  (S.Y. 2017 - 2021)</p>
-      <p><strong>Senior High School:</strong>STI College of San Jose Del Monte  (S.Y. 2021 - 2023)</p>
+      <p><strong>Junior High School:</strong> Muzon Harmony Hills High School (S.Y. 2017 - 2021)</p>
+      <p><strong>Senior High School:</strong> STI College of San Jose Del Monte (S.Y. 2021 - 2023)</p>
       <p><strong>College:</strong> FEU Institute of Technology (S.Y. 2023 - Current)</p>
     </div>
 
     <!-- Skills -->
     <div>
       <h5 class="section-title">SOFT SKILLS:</h5>
-      <ul id="skills-list" class="content-list">
+      <ul>
         <li>Collaborative Teamwork</li>
         <li>Organizational Excellence</li>
         <li>Creative Problem-Solving</li>
@@ -123,7 +164,7 @@
       </ul>
 
       <h5 class="section-title">HARD SKILLS:</h5>
-      <ul id="skills-list" class="content-list">
+      <ul>
         <li>C++</li>
         <li>Java</li>
         <li>CSS</li>
@@ -135,7 +176,7 @@
       </ul>
     </div>
 
-    <!-- Button -->
+    <!-- Dark Mode Button -->
     <button id="toggle-button" onclick="toggleMode()">Switch to Dark Mode</button>
   </div>
 
@@ -143,14 +184,8 @@
     function toggleMode() {
       const body = document.body;
       const button = document.getElementById("toggle-button");
-      
       body.classList.toggle("dark-mode");
-      
-      if (body.classList.contains("dark-mode")) {
-        button.textContent = "Switch to Light Mode";
-      } else {
-        button.textContent = "Switch to Dark Mode";
-      }
+      button.textContent = body.classList.contains("dark-mode") ? "Switch to Light Mode" : "Switch to Dark Mode";
     }
   </script>
 </body>
