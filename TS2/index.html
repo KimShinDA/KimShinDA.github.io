@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacking Colors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        button {
+            padding: 10px;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            width: 100px;
+        }
+
+        .box-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border: 5px solid;
+            background-color: transparent;
+            transition: transform 1s ease-in-out, opacity 0.5s;
+            opacity: 1;
+        }
+
+        /* Button Colors */
+        button[data-day="Monday"] { background-color: #e74c3c; }
+        button[data-day="Tuesday"] { background-color: #27ae60; }
+        button[data-day="Wednesday"] { background-color: #f39c12; }
+        button[data-day="Thursday"] { background-color: #3498db; }
+        button[data-day="Friday"] { background-color: #9b59b6; }
+        button[data-day="Saturday"] { background-color: #2ecc71; }
+        button[data-day="Sunday"] { background-color: #e67e22; }
+    </style>
+    <script>
+        let currentBox = null;
+
+        function addBox(day) {
+            const container = document.querySelector('.box-container');
+            const newBox = document.createElement('div');
+            newBox.className = 'box';
+            newBox.style.borderColor = getDayColor(day);
+            newBox.style.transform = `translateY(-200px)`;
+            newBox.style.opacity = '0';
+            
+            container.appendChild(newBox);
+            
+            setTimeout(() => {
+                newBox.style.transform = `translateY(0px)`;
+                newBox.style.opacity = '1';
+            }, 100);
+            
+            if (currentBox) {
+                currentBox.style.transform = `translateY(-200px)`;
+                currentBox.style.opacity = '0';
+                setTimeout(() => {
+                    currentBox.remove();
+                }, 1000);
+            }
+            
+            currentBox = newBox;
+        }
+
+        function getDayColor(day) {
+            const colors = {
+                'Monday': '#e74c3c',
+                'Tuesday': '#27ae60',
+                'Wednesday': '#f39c12',
+                'Thursday': '#3498db',
+                'Friday': '#9b59b6',
+                'Saturday': '#2ecc71',
+                'Sunday': '#e67e22'
+            };
+            return colors[day] || '#3498db';
+        }
+    </script>
+</head>
+<body>
+    <div class="buttons-container">
+        <button data-day="Monday" onclick="addBox('Monday')">Monday</button>
+        <button data-day="Tuesday" onclick="addBox('Tuesday')">Tuesday</button>
+        <button data-day="Wednesday" onclick="addBox('Wednesday')">Wednesday</button>
+        <button data-day="Thursday" onclick="addBox('Thursday')">Thursday</button>
+        <button data-day="Friday" onclick="addBox('Friday')">Friday</button>
+        <button data-day="Saturday" onclick="addBox('Saturday')">Saturday</button>
+        <button data-day="Sunday" onclick="addBox('Sunday')">Sunday</button>
+    </div>
+    <div class="box-container"></div>
+</body>
+</html>
