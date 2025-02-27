@@ -1,0 +1,68 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(60deg, rgba(105, 110, 255, 0.5), rgba(248, 172, 255, 0.5));
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.day-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.day-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Day button colors */
+.day-btn:nth-child(1) { background-color: #FFADAD; border: 2px solid #E07A7A; }
+.day-btn:nth-child(2) { background-color: #FFD6A5; border: 2px solid #E0A87A; }
+.day-btn:nth-child(3) { background-color: #FDFFB6; border: 2px solid #D4E07A; }
+.day-btn:nth-child(4) { background-color: #CAFFBF; border: 2px solid #9FDBA5; }
+.day-btn:nth-child(5) { background-color: #9BF6FF; border: 2px solid #7ADCE0; }
+.day-btn:nth-child(6) { background-color: #A0C4FF; border: 2px solid #7A9EE0; }
+.day-btn:nth-child(7) { background-color: #BDB2FF; border: 2px solid #8F7AE0; }
+
+/* Animation container */
+.animation-container {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    bottom: 28%;
+}
+
+/* Animated box styles */
+.animated-box {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 1.5s ease-in-out, background-color 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    background-color: transparent;
+    opacity: 1;
+}
