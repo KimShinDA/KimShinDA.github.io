@@ -22,7 +22,7 @@ function createAnimatedBox(day) {
 
     // Remove existing boxes with animation
     document.querySelectorAll(".animated-box").forEach(box => {
-        box.style.top = "-10px"; 
+        box.style.top = "-20px"; 
         setTimeout(() => box.remove(), 1000);
     });
 
@@ -31,7 +31,7 @@ function createAnimatedBox(day) {
     newBox.className = "animated-box";
     newBox.style.borderColor = dayColors[day].border;
     newBox.style.backgroundColor = "transparent"; 
-    newBox.style.top = "-10px";
+    newBox.style.top = "-20px";
     newBox.dataset.bgColor = dayColors[day].bg;
 
     animationContainer.appendChild(newBox);
@@ -40,7 +40,7 @@ function createAnimatedBox(day) {
         newBox.style.top = "60%";
     }, 300); 
 
-    setTimeout(checkOverlaps, 100);
+    setTimeout(checkOverlaps, 200);
 }
 
 // Check for overlapping boxes
@@ -58,10 +58,10 @@ function checkOverlaps() {
 
         if (isOverlapping) {
             box1.style.backgroundColor = box1.dataset.bgColor;
-            box1.style.opacity = "0.7";
+            box1.style.opacity = "1";
         } else {
             box1.style.backgroundColor = "transparent";
-            box1.style.opacity = "1";
+            box1.style.opacity = "12";
         }
     });
 
