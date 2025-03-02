@@ -3,44 +3,88 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #59c173, #a17fe0);
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
+
 .calculator {
-    width: 280px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .display {
     width: 100%;
-    height: 60px;
-    margin-bottom: 10px;
+    height: 80px;
+    margin-bottom: 20px;
     text-align: right;
-    font-size: 28px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    font-size: 36px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #e9ecef;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.btn-container {
+
+.buttonContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-}
-.btn-custom {
+    gap: 12px;
     width: 100%;
-    height: 50px;
-    font-size: 20px;
 }
-.btn-zero {
+
+.button {
+    width: 100%;
+    height: 70px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background: #6c757d;
+    color: white;
+}
+
+.button:hover {
+    background: #495057;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.buttonZero {
     grid-column: span 2;
 }
-.btn-equal {
-    grid-row: span 2; 
-    height: 100%; 
-    font-size: 20px;
+
+.buttonEqual {
+    grid-row: span 2;
+    height: 100%;
+    font-size: 24px;
+    background: #28a745;
+}
+
+.buttonEqual:hover {
+    background: #218838;
+}
+
+.buttonOperator {
+    background: #f39c12;
+}
+
+.buttonOperator:hover {
+    background: #e67e22;
+}
+
+.buttonClear {
+    background: #e74c3c;
+}
+
+.buttonClear:hover {
+    background: #c0392b;
 }
