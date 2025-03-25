@@ -157,7 +157,7 @@ body {
     left: 0;
     width: 100%;
     height: auto; 
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(233, 207, 74, 0.85);
     color: black;
     display: flex;
     flex-direction: column;
@@ -213,8 +213,6 @@ body {
 .more-link:hover .play-icon {
     transform: scale(1.1); 
 }
-
-
 
 /* Popup Styles */
 .restaurant-popup {
