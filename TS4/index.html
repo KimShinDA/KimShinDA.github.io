@@ -23,48 +23,79 @@
             <div class="card" data-id="gabbel">
                 <h3>Gabbel Löffel</h3>
                 <img src="https://i.pinimg.com/736x/61/c7/84/61c784fd0fecee23e5d62f03979d14b7.jpg" alt="Gabbel Löffel">
+                <div class="hover-message">
+                    <p>Get out your Lederhosen! Go to Gabbel Löffel</p>
+                    <span class="more-link">
+                        <img src="play.png" alt="Play icon" class="play-icon">
+                        more
+                    </span>
+                </div>
             </div>
             <div class="card" data-id="gary">
                 <h3>Gary Gari</h3>
                 <img src="https://i.pinimg.com/736x/79/a6/ed/79a6ed54fbd1da55703ce7e18b01339e.jpg" alt="Gary Gari">
+                <div class="hover-message">
+                    <p>The delicious headquarter for all your ginger-related needs</p>
+                    <span class="more-link">
+                        <img src="play.png" alt="Play icon" class="play-icon">
+                        more
+                    </span>
+                </div>
             </div>
             <div class="card" data-id="ilpiatto">
                 <h3>Il Piatto</h3>
                 <img src="https://i.pinimg.com/474x/60/0f/b8/600fb8697fe49b271f7161e451384a77.jpg" alt="Il Piatto">
+                <div class="hover-message">
+                    <p>Got wild finicky kids? Head for kid-friendly dining!</p>
+                    <span class="more-link">
+                        <img src="play.png" alt="Play icon" class="play-icon">
+                        more
+                    </span>
+                </div>
             </div>
             <div class="card" data-id="pierre">
                 <h3>Pierre Platters</h3>
                 <img src="https://i.pinimg.com/736x/b4/8b/fb/b48bfbc78dd053fb919ae0c7cbeae033.jpg" alt="Pierre Platters">
+                <div class="hover-message">
+                    <p>Smart talks. Smart eats!</p>
+                    <span class="more-link">
+                        <img src="play.png" alt="Play icon" class="play-icon">
+                        more
+                    </span>
+                </div>
             </div>
         </div>
 
         <button class="main-menu">Main Menu</button>
     </div>
 
-    <!-- Restaurant Details Popup -->
     <div id="restaurant-popup" class="restaurant-popup">
         <div class="popup-content">
-            <button class="close-btn" onclick="closePopup()">×</button>
+            <div class="decorative-text" id="popup-decorative"></div>
+            <button class="popup-main-menu" onclick="closePopup()">Main Menu</button>
             <div class="popup-image-container">
                 <img id="popup-image" src="" alt="Restaurant Image">
             </div>
             <div class="popup-text-content">
-                <h2 id="popup-name">Gary Gari</h2>
-                <p class="popup-website" id="popup-website">GANDG.RES</p>
+                <h1 id="popup-name"></h1>
                 
-                <div class="popup-details">
-                    <p><strong>Address:</strong> <span id="popup-address">76 No. Highland Ave, Meridien City</span></p>
-                    <p><strong>Phone:</strong> <span id="popup-phone">490 24 6709</span></p>
-                    <p><strong>Website:</strong> <span id="popup-website-url">GANDG.RES</span></p>
-                    <p><strong>Category:</strong> <span id="popup-category">Japanese</span></p>
-                    <p><strong>Hours:</strong> <span id="popup-hours">5PM - 10PM</span></p>
-                    <p><strong>Price:</strong> <span id="popup-price">$$</span></p>
+                <div class="popup-details-container">
+                    <div class="details-column left-column">
+                        <p><strong>Address:</strong> <span id="popup-address"></span></p>
+                        <p><strong>T:</strong> <span id="popup-phone"></span></p>
+                        <p><strong>W:</strong> <span id="popup-website"></span></p>
+                    </div>
+                    <div class="details-separator"></div>
+                    <div class="details-column right-column">
+                        <p><strong>Category:</strong> <span id="popup-category"></span></p>
+                        <p><strong>Hours:</strong> <span id="popup-hours"></span></p>
+                        <p><strong>Price:</strong> <span id="popup-price"></span></p>
+                    </div>
                 </div>
                 
-                <div class="popup-description">
-                    <p id="popup-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                    </p>
+                <div class="popup-description" id="popup-description">
+                    <p id="popup-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat harum ad quia id fugiat ea quas similique saepe. Eligendi porro voluptatem nulla autem dolorum doloremque harum? Quod commodi dolor cupiditate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ducimus illo laborum quos illum incidunt natus commodi ut unde maiores cum, et inventore enim! Natus, ducimus dolores. Ut, pariatur quo!</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In asperiores quo deserunt maiores, qui iste aspernatur. Ex dignissimos voluptate, laborum molestias maiores earum quis ratione molestiae suscipit tempora doloribus repellat?</p>
                 </div>
             </div>
         </div>

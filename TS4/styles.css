@@ -57,14 +57,17 @@ body {
 
 .card {
     width: 22%;
+    height: 400px;
     background: rgba(0, 0, 0, 0.7);
-    padding: 15px;
+    padding: 0px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
     position: relative;
+    border: 2px solid white;
+    margin-bottom: 20px;
 }
 
 .card:hover {
@@ -73,7 +76,10 @@ body {
 
 .card img {
     width: 100%;
-    border-radius: 10px;
+    height: 100%; 
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .card h3 {
@@ -81,8 +87,50 @@ body {
     color: black;
     padding: 10px;
     margin: 0;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     font-size: 1.2rem;
+    border: 2px solid white;
+}
+
+.hover-message {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    transform: translateY(20px); 
+    transition: all 0.3s ease;
+}
+
+.card:hover .hover-message {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.hover-message p {
+    margin: 3px 0; 
+    font-size: 1rem; 
+    line-height: 1.2;
+}
+
+.hover-message span {
+    margin-top: 8px;
+    font-weight: bold;
+    color: yellow;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
 }
 
 .main-menu {
@@ -94,9 +142,79 @@ body {
     font-size: 1rem;
     cursor: pointer;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 50px;
+    right: 40px;
 }
+
+.main-menu:hover {
+    background: #ffd700;
+}
+
+/* Hover Message Styles */
+.hover-message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto; 
+    background: rgba(255, 255, 255, 0.7);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    transform: translateY(20px); 
+}
+
+.card:hover .hover-message {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.hover-message p {
+    margin: 8px 0; 
+    padding: 5px 0; 
+    font-size: 1rem;
+    line-height: 1.4; 
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.hover-message span {
+    margin-top: 8px;
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.1rem;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+.play-icon {
+    width: 18px !important;
+    height: 18px !important;
+    object-fit: cover;
+}
+
+.more-link:hover .play-icon {
+    transform: scale(1.1); 
+}
+
+
 
 /* Popup Styles */
 .restaurant-popup {
@@ -114,19 +232,20 @@ body {
 .popup-content {
     background-color: white;
     max-width: 800px;
-    margin: 50px auto;
-    padding: 0;
+    width: 90%;
+    height: 80vh;
+    margin: 5vh auto;
+    display: flex;
     border-radius: 5px;
     color: #333;
+    overflow: hidden;
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
 .popup-image-container {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
+    width: 40%;
+    height: 100%;
+    display: flex;
 }
 
 #popup-image {
@@ -136,72 +255,154 @@ body {
 }
 
 .popup-text-content {
+    width: 60%;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    font-family: 'Arial', sans-serif;
 }
 
-.close-btn {
+.popup-main-menu {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(0,0,0,0.5);
-    color: white;
+    background: yellow;
+    color: black;
+    padding: 10px 20px;
     border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 10;
+    font-weight: bold;
+}
+
+.popup-main-menu:hover {
+    background: #ffd700;
 }
 
 #popup-name {
     color: #c00;
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-}
-
-.popup-website {
-    font-family: 'Arial', sans-serif;
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 30px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 
-.popup-details {
+.popup-details-container {
+    display: flex;
     margin-bottom: 30px;
+    gap: 20px;
 }
 
-.popup-details p {
+.details-column {
+    flex: 1;
+}
+
+.details-column p {
     margin: 10px 0;
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.details-column strong {
+    font-weight: bold;
+}
+
+.details-separator {
+    width: 1px;
+    background-color: #ddd;
+    margin: 5px 0;
+}
+
+.left-column {
+    text-align: left;
+    padding-right: 20px;
+}
+
+.right-column {
+    text-align: left;
+    padding-left: 20px;
 }
 
 .popup-description {
-    font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.3;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 10px 0;
 }
 
 .popup-description p {
     margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.decorative-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    background-color: yellow;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 5%;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+}
+
+.decorative-text span {
+    transform: rotate(180deg);
+    font-weight: bold;
+    color: #000;
 }
 
 @media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+    
     .popup-content {
-        width: 90%;
+        flex-direction: column;
+        height: auto;
     }
     
     .popup-image-container {
+        width: 100%;
         height: 200px;
+    }
+    
+    .popup-text-content {
+        width: 100%;
     }
     
     #popup-name {
         font-size: 2rem;
     }
+    
+    .main-menu {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 20px auto;
+    }
 }
 
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+    }
+    
+    .restaurant-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+}
