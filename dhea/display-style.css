@@ -1,0 +1,28 @@
+.block-example {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightblue;
+}
+
+/* Inline Element */
+.inline-example {
+    display: inline;
+    background-color: lightcoral;
+    padding: 5px;
+}
+
+/* Inline-Block Element */
+.inline-block-example {
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+    margin: 5px;
+    background-color: lightgreen;
+}
+
+/* None (Hides the Element) */
+.none-example {
+    display: none;
+}

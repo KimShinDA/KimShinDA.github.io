@@ -1,0 +1,146 @@
+.demo-cursor {
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 10;
+    border: 3px solid #f813137c;
+    border-radius: 0cqh;
+}
+
+.demo-cursor:hover {
+    background-color:aqua;
+    color: white;
+}
+
+.defaul:hover{
+    cursor: default;
+}   
+
+.auto{
+    cursor: auto;
+}       
+
+.crosshair{
+    cursor: crosshair;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.move{
+    cursor: move;
+}
+
+.text{
+    cursor: text;
+}
+
+.wait{
+    cursor: wait;
+}
+
+.help{
+    cursor: help;
+}
+
+.not-allowed{
+    cursor: not-allowed;
+}
+
+.progress{
+    cursor: progress;
+}
+
+.alias{
+    cursor: alias;
+}
+
+.copy{
+    cursor: copy;
+}
+
+.no-drop{
+    cursor: no-drop;
+}
+
+e-resize{
+    cursor: e-resize;
+}
+
+.n-resize{
+    cursor: n-resize;
+}
+
+.ne-resize{
+    cursor: ne-resize;
+}
+
+.nw-resize{
+    cursor: nw-resize;
+}
+
+.s-resize{
+    cursor: s-resize;
+}
+
+.se-resize{
+    cursor: se-resize;
+}
+
+.sw-resize{
+    cursor: sw-resize;
+}
+
+.w-resize{
+    cursor: w-resize;
+}
+
+.ew-resize{
+    cursor: ew-resize;
+}
+
+.ns-resize{
+    cursor: ns-resize;
+}
+
+.nesw-resize{
+    cursor: nesw-resize;
+}
+
+.nwse-resize{
+    cursor: nwse-resize;
+}
+
+.col-resize{
+    cursor: col-resize;
+}
+
+.row-resize{
+    cursor: row-resize;
+}
+.zoom-in{
+    cursor: zoom-in;
+}
+
+.zoom-out{
+    cursor: zoom-out;
+}
+
+.grab{
+    cursor: grab;
+}
+
+.cell{
+    cursor: cell;
+}
+
+.grabbing{
+    cursor: grabbing;
+}
+
+.all-scroll{
+    cursor: all-scroll;
+}
