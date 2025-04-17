@@ -107,7 +107,14 @@ main {
     justify-content: space-between;
     margin-top: 50px;
     padding-bottom: 50px;
-}
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .home-section.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 .content {
     max-width: 550px;
@@ -220,7 +227,13 @@ h1 {
 /* About Section */
 .about-section {
     padding: 40px 0;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
+.about-section.show {
+  opacity: 1;
+}
+
 
 .section-title {
     text-align: center;
@@ -621,6 +634,7 @@ footer {
     color: rgba(255, 255, 255, 0.8);
     margin-top: 5px;
     margin-bottom: 10px;
+    
 }
 
 /* ===== RESPONSIVE STYLES ===== */
@@ -700,7 +714,10 @@ footer {
 
     .school-header-subtitle {
         font-size: 1.2rem;
-    }
+    }.copyright {
+        font-size: 14px;
+        padding: 20px 0;
+    }    
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -727,6 +744,17 @@ footer {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .home-section {
+        flex-direction: column;
+    }
+    .content-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .logo-name {
+        margin-right: 0;
     }
 }
 
@@ -796,3 +824,4 @@ footer {
         font-size: 14px;
     }
 }
+
