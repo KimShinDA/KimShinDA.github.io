@@ -27,12 +27,6 @@ header {
     z-index: 100;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
 .school-logo {
     height: 70px;
     width: 70px;
@@ -46,6 +40,7 @@ header {
     font-weight: 700;
     color: #EC7FA9;
     letter-spacing: 1px;
+    margin-right: 33%;
 }
 
 nav ul {
@@ -542,7 +537,6 @@ h1 {
 footer {
     background-color: #BE5985;
     color: white;
-    padding: 40px 5%;
     text-align: center;
     margin-top: 80px;
 }
@@ -600,7 +594,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .footer-social a {
@@ -625,7 +619,8 @@ footer {
 .copyright {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 /* ===== RESPONSIVE STYLES ===== */
@@ -637,6 +632,15 @@ footer {
     .skills-container {
         margin-bottom: 75%;
     }
+
+    .logo-name {
+        margin-right: 0%;
+    }
+
+    footer {
+        height: 150;
+    }
+
 }
 
 @media (max-width: 992px) {
