@@ -107,13 +107,6 @@ main {
     justify-content: space-between;
     margin-top: 50px;
     padding-bottom: 50px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-  }
-  .home-section.show {
-    opacity: 1;
-    transform: translateY(0);
   }
 
 .content {
@@ -189,11 +182,6 @@ h1 {
     color: white;
     transform: translateY(-3px);
 }
-
-.home-section {
-    width: 100%;
-    padding: 40px 5%;
-  }
   
   .content-container {
     display: flex;
@@ -226,12 +214,7 @@ h1 {
 
 /* About Section */
 .about-section {
-    padding: 40px 0;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-.about-section.show {
-  opacity: 1;
+ padding: 40px 0;
 }
 
 
@@ -351,10 +334,6 @@ h1 {
     padding: 60px 5%;
 }
 
-.certificates-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 .certificates-grid {
     display: grid;
@@ -401,7 +380,7 @@ h1 {
     text-decoration: underline;
 }
 /* Skills Section */
-.skills-container {
+.skills-section {
     display: block;
     margin-bottom: 15%;
     padding: 40px 0 20px 0;
@@ -636,6 +615,29 @@ footer {
     margin-bottom: 10px;
     
 }
+
+/* ===== PAGES ANIMATION ===== */
+/* Base styles for sections */
+.home-section,
+.about-section,
+.project-section,
+.certificates-section,
+.skills-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Show state for sections */
+.home-section.show,
+.about-section.show,
+.project-section.show,
+.certificates-section.show,
+.skills-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 1200px) {
