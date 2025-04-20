@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Redirect after delay for better UX
             setTimeout(() => {
-                window.location.href = '/dhea/pages/about.html';
+                window.location.href = 'about.html';
             }, 800);
             
             // Timeout to reset button if navigation fails
